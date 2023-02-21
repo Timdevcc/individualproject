@@ -1,0 +1,98 @@
+
+
+<Container>:
+    txt: oh
+    ntxt: oho
+    cols: 2
+    result: res
+    GridLayout:
+        rows: 5
+        cols: 3
+        Button:
+            on_press:
+                root.Pressed(0, self)
+        Button:
+            on_press:
+                root.Pressed(1, self)
+        Button:
+            on_press:
+                root.Pressed(2, self)
+        Button:
+            on_press:
+                root.Pressed(3, self)
+        Button:
+            on_press:
+                root.Pressed(4, self)
+        Button:
+            on_press:
+                root.Pressed(5, self)
+        Button:
+            on_press:
+                root.Pressed(6, self)
+        Button:
+            on_press:
+                root.Pressed(7, self)
+        Button:
+            on_press:
+                root.Pressed(8, self)
+        Button:
+            on_press:
+                root.Pressed(9, self)
+        Button:
+            on_press:
+                root.Pressed(10, self)
+        Button:
+            on_press:
+                root.Pressed(11, self)
+        Button: 
+            on_press:
+                root.Pressed(12, self)
+        Button:
+            on_press:
+                root.Pressed(13, self)
+        Button:
+            on_press:
+                root.Pressed(14, self)
+    
+
+    BoxLayout:
+        size_hint: 0.6, 1
+        orientation: 'vertical'
+        Label:
+            id: res
+            size_hint: 1, 0.6
+            text:
+        BoxLayout:    
+            size_hint: 1, 0.6
+            TextInput:
+                id: oh
+                multiline: False
+                font_size: 25
+            Button:
+                text: 'задать число'
+                on_press:
+                    root.topic_change()
+        BoxLayout:    
+            size_hint: 1, 0.6
+            TextInput:
+                id: oho
+                multiline: False
+                font_size: 40
+            Button:
+                text: 'задать\n количество\n уроков'
+                multiline: True
+                on_press:
+                    root.train()
+        Button:
+            text: 'натренировать'
+            size_hint: 1, 0.3
+            on_press:
+                root.go_train()
+        Button:
+            text: 'распознать число'
+            size_hint: 1, 0.3
+            on_press:
+                root.recog()
+            
+
+    
